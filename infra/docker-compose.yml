@@ -1,0 +1,28 @@
+version: '3'
+services:
+    portainer:
+        image: portainer/portainer
+        labels:
+            - "traefik.enable=true"
+            - "traefik.backend=portainer"
+            - "traefik.frontend.rule=PathPrefixStrip:/portainer/"
+        ports:
+            - "9000:9000"
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+    traefik:
+        image: traefik:1.5.4
+        command: 
+            - --api
+            - --docker
+        ports:
+            - "80:80"
+            - "8080:8080"
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+    drgaps:
+        image: heigvd/drgaps
+        labels:
+            - "traefik.enable=true"
+            - "traefik.backend=beers"
+            - "traefik.frontend.rule=PathPrefixStrip:/"
