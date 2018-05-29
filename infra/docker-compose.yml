@@ -21,7 +21,7 @@ services:
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
     drgaps:
-        image: heigvd/drgaps
+        build: ../dr-gaps-webapp
         labels:
             - "traefik.enable=true"
             - "traefik.backend=beers"
