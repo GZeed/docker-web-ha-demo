@@ -11,7 +11,31 @@ Primary use:
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
+.dr-gaps-red {
+  background-image: url(../images/gaps-red.png);
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  left: 40px;
+  top: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
+.dr-gaps-green {
+  background-image: url(../images/gaps-green.png);
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  left: 40px;
+  top: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.flex-w {
+  background-color: darkgray;
+}
 @font-face {
   font-family: Poppins-Regular;
   src: url('../fonts/Poppins/Poppins-Regular.ttf'); 
@@ -214,14 +238,14 @@ input.input100 {
 /*---------------------------------------------*/
 .m2-txt1 {
   font-family: PlayfairDisplay-Regular;
-  font-size: 25px;
+  font-size: 32px;
   color: #fff;
   line-height: 1.2;
 }
 
 .m2-txt2 {
   font-family: PlayfairDisplay-Italic;
-  font-size: 18px;
+  font-size: 24px;
   color: #fff;
   line-height: 1;
 }

@@ -1,5 +1,7 @@
 const express = require('express');
 const  router = express.Router();
+const generateName = require('sillyname');
+const sillyName = generateName();
 
 let counter = 0;
 
@@ -12,7 +14,7 @@ router.get('/data', function(req, res, next) {
   counter += 1;
   console.log(counter);
   const payload = {
-    beer: 'nice beer',
+    waiter: sillyName,
     counter: counter
   }
   return res.json(payload);
